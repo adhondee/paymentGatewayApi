@@ -1,0 +1,34 @@
+﻿@startuml
+left to right direction
+actor     Shopper
+actor     Merchant
+actor     PaymentGateway
+
+
+Package "View Payment(s)" as MakePayment{
+    usecase   PaymentAPI
+    usecase   MerchantAPI
+    usecase   Login
+    usecase   ViewPurchases
+    usecase   ViewSales
+        
+
+    
+
+    Shopper --> (Login) 
+    Shopper --> (ViewPurchases)
+    
+    (ViewPurchases) .> (Login) : include
+    
+    (Login) --> (MerchantAPI)
+    (ViewPurchases) --> (MerchantAPI)
+    
+    Merchant --> (ViewSales)
+    (ViewSales) --> (MerchantAPI)
+    
+    
+    PaymentGateway -> (PaymentAPI) : Provides
+    
+    MerchantAPI --> (PaymentAPI) : Calls
+}
+@enduml

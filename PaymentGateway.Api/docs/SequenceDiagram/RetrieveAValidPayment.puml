@@ -1,0 +1,20 @@
+@startuml
+!theme mars
+
+title Merchant retrieve details of a previously made payment with a valid payment id
+skinparam sequenceMessageAlign center
+hide footbox
+actor merchant
+
+participant "Payment Gateway" as PaymentGateway
+database PaymentRepository
+
+merchant -> PaymentGateway : Send valid unique payment identifier
+activate PaymentGateway #6C8EBF
+PaymentGateway -> PaymentGateway : Validate unique payment identifier
+PaymentGateway -> PaymentRepository : Retrieve payment by unique payment identifier
+PaymentGateway <-- PaymentRepository :  return payment
+PaymentGateway -> merchant : Return response (payment details)
+deactivate PaymentGateway
+
+@enduml

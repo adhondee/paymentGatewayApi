@@ -1,0 +1,44 @@
+﻿@startuml
+left to right direction
+actor     Shopper
+actor     Merchant
+actor     PaymentGateway
+actor     AcquiringBank
+
+Package "Make a Payment" as MakePayment{
+    usecase   PaymentAPI
+    usecase   MerchantAPI
+    usecase   Register
+    usecase   Login
+    usecase   MakeOnlinePurchase
+    usecase   ValidatePayment
+    usecase   ProcessPayment
+    usecase   StorePayment
+
+    Merchant -up-> (MerchantAPI) : Provides
+    
+    Shopper --> (Register) 
+    Shopper --> (Login) 
+    Shopper --> (MakeOnlinePurchase) 
+    
+    
+    (Register)  --> (MerchantAPI) 
+    (MakeOnlinePurchase)  .> (Login) : include
+    (MakeOnlinePurchase)  --> (MerchantAPI) 
+    (Login) .> (Register) : include
+    (Login)  --> (MerchantAPI) 
+    
+    
+    
+    PaymentGateway -up-> (PaymentAPI) : Provides
+    
+    MerchantAPI --> (PaymentAPI) : Calls
+    
+    (PaymentAPI) .> (ValidatePayment) : include
+    (PaymentAPI) .> (ProcessPayment) : include
+    (PaymentAPI) .> (StorePayment) : include
+    
+    
+    PaymentAPI --> (AcquiringBank) : Calls
+}
+@enduml

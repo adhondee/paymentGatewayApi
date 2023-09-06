@@ -1,0 +1,20 @@
+@startuml
+!theme mars
+
+title Merchant send Online Purchase request to Payment Gateway which is declined by Acquirer
+skinparam sequenceMessageAlign center
+hide footbox
+actor merchant
+
+participant "Payment Gateway" as PaymentGateway
+database PaymentRepository
+participant "Acquiring Bank" as AcquiringBank
+
+merchant -> PaymentGateway : Send Online Purchase request
+PaymentGateway -> PaymentGateway : Validate card number, expiry month/date, amount, currency, cvv
+PaymentGateway -> AcquiringBank : Send request to Acquiring Bank
+PaymentGateway <-- AcquiringBank : Return response (unique identifier and status 'Declined')
+PaymentGateway -> PaymentRepository : Store Online Purchase
+PaymentGateway -> merchant : Return response (unique identifier and status)
+
+@enduml
