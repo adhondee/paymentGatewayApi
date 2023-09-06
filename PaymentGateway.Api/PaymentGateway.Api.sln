@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaymentGateway.Api", "PaymentGateway.Api\PaymentGateway.Api.csproj", "{A1C7B8C9-2F2C-44CC-80CE-14D6511F051B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaymentGateway.Domain", "PaymentGateway.Domain\PaymentGateway.Domain.csproj", "{CFD5118D-6174-4A53-8EA3-9C5DB0337B73}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaymentGateway.Infrastructure", "PaymentGateway.Infrastructure\PaymentGateway.Infrastructure.csproj", "{25C159C3-8345-495B-AC96-741D59769FD6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A1C7B8C9-2F2C-44CC-80CE-14D6511F051B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1C7B8C9-2F2C-44CC-80CE-14D6511F051B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1C7B8C9-2F2C-44CC-80CE-14D6511F051B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1C7B8C9-2F2C-44CC-80CE-14D6511F051B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFD5118D-6174-4A53-8EA3-9C5DB0337B73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFD5118D-6174-4A53-8EA3-9C5DB0337B73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFD5118D-6174-4A53-8EA3-9C5DB0337B73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFD5118D-6174-4A53-8EA3-9C5DB0337B73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25C159C3-8345-495B-AC96-741D59769FD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25C159C3-8345-495B-AC96-741D59769FD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25C159C3-8345-495B-AC96-741D59769FD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25C159C3-8345-495B-AC96-741D59769FD6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

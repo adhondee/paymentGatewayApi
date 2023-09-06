@@ -1,0 +1,23 @@
+{
+  "Version": 1,
+  "Hash": "j92LnYm+KfNBlOCg6WfvoYu5zJbcwqNPy4arbNhZNEQ=",
+  "Source": "PaymentGateway.Api",
+  "BasePath": "_content/PaymentGateway.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "C:\\Users\\AshwinDhondee\\Desktop\\PaymentAPI\\paymentGatewayApi\\PaymentGateway.Api\\PaymentGateway.Domain\\PaymentGateway.Domain.csproj",
+      "Version": 2,
+      "Source": "PaymentGateway.Domain",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier"
+    }
+  ],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
